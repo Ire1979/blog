@@ -1,0 +1,21 @@
+.fotoCard {
+    height: 300px;
+    background-size: cover;
+    position: relative;
+}
+
+.categoria {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.autor img {
+    border-radius: 50%;
+    width: 30px;
+}
