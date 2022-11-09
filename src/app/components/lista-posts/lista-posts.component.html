@@ -1,11 +1,20 @@
-<div>
-    <h2>Post</h2>
-    <div *ngFor="let post of posts">
-        <h3>{{post.titulo}}</h3>
-        <img [src]="post.imagen" alt="">
-        <p>{{post.texto}}</p>
-        <p>{{post.categoria}}</p>
-        <p>{{post.fecha}}</p>
-        <p>{{post.autor}}</p>
+<div class="container">
+    <h1 class="my-5 text-center">No soy francés, soy de Boston!</h1>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 mb-4" *ngFor="let post of posts">
+            <div class="card">
+                <div class="fotoCard" [ngStyle]="{backgroundImage: 'url('+post.imagen+')'}">
+                    <div class="categoria">{{post.categoria}}</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{post.titulo}}</h5>
+                    <div class="row">
+                        <div class="col"><img src="https://avatars.githubusercontent.com/u/114173266?s=40&v=4" alt="autor"> by {{post.autor}}</div>
+                        <div class="col text-right">{{post.fecha}}</div>
+                    </div>
+                    <p class="card-text">{{post.texto}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
