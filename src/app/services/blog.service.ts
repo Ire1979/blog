@@ -69,4 +69,9 @@ export class BlogService {
 
     ]
   }
+
+  getAll(): Post[] {
+    return this.arrPosts;
+  }
+
 }
