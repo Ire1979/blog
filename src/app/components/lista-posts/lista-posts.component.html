@@ -1,1 +1,11 @@
-<p>lista-posts works!</p>
+<div>
+    <h2>Post</h2>
+    <div *ngFor="let post of posts">
+        <h3>{{post.titulo}}</h3>
+        <img [src]="post.imagen" alt="">
+        <p>{{post.texto}}</p>
+        <p>{{post.categoria}}</p>
+        <p>{{post.fecha}}</p>
+        <p>{{post.autor}}</p>
+    </div>
+</div>
