@@ -10,14 +10,29 @@ import { BlogService } from 'src/app/services/blog.service';
 export class ListaPostsComponent implements OnInit {
 
   posts: Post[];
+  categorias: string[];
+
 
   constructor(private blogService: BlogService) {
     this.posts = [];
+    this.categorias = [];
+
   }
 
   ngOnInit(): void {
-    this.posts = this.blogService.getAll();
-    console.log(this.posts);
+    this.posts = this.blogService.getAllPosts();
+    this.categorias = this.blogService.getCategories();
+    console.log(this.categorias);
   }
+
+  selectCategory($event: any) {
+    if ($event.target.value === 'todos') {
+      this.posts = this.blogService.getAllPosts();
+    } else {
+      this.posts = this.blogService.filterByCategory($event.target.value);
+    }
+
+  }
+
 
 }

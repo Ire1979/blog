@@ -70,8 +70,17 @@ export class BlogService {
     ]
   }
 
-  getAll(): Post[] {
+  getAllPosts(): Post[] {
     return this.arrPosts;
+  }
+
+  getCategories(): string[] {
+    const categoriasRep = this.arrPosts.map(post => post.categoria);
+    return [...new Set(categoriasRep)];
+  }
+
+  filterByCategory(pCategory: string): Post[] {
+    return this.arrPosts.filter(post => post.categoria === pCategory);
   }
 
 }
