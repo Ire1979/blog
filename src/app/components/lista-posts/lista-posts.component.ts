@@ -30,7 +30,6 @@ export class ListaPostsComponent implements OnInit {
     } else {
       this.posts = this.blogService.filterByCategory($event.target.value);
     }
-
   }
 
 
