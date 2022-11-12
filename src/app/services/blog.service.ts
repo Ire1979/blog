@@ -83,4 +83,8 @@ export class BlogService {
     return this.arrPosts.filter(post => post.categoria === pCategory);
   }
 
+  createPost(pPost: Post) {
+    this.arrPosts.push(pPost);
+  }
+
 }
