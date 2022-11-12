@@ -1,36 +1,42 @@
 <div class="container">
+    <h1 class="my-5 text-center">Nuevo Post</h1>
     <div class="row">
         <div class="col-6 offset-3">
             <form [formGroup]="formulario">
                 <div class="mb-3">
                     <label class="form-label">Título</label>
                     <input type="text" class="form-control" placeholder="Introduce el título del post" formControlName="titulo">
+                    <p class="error" *ngIf="checkError('titulo', 'required')">El campo es obligatorio</p>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Texto</label>
-                    <textarea class="form-control" cols="30" rows="10" placeholder="Introduce el texto del post" formControlName="texto"></textarea>
+                    <textarea class="form-control" cols="30" rows="5" placeholder="Introduce el texto del post" formControlName="texto"></textarea>
+                    <p class="error" *ngIf="checkError('texto', 'required')">El campo es obligatorio</p>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Autor</label>
                     <input type="text" class="form-control" placeholder="Introduce el nombre del autor" formControlName="autor">
+                    <p class="error" *ngIf="checkError('autor', 'required')">El campo es obligatorio</p>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Imagen</label>
                     <input type="text" class="form-control" placeholder="Introduce una URL" formControlName="imagen">
+                    <p class="error" *ngIf="checkError('imagen', 'required')">El campo es obligatorio</p>
+                    <p class="error" *ngIf="checkError('imagen', 'pattern')">La URL introducida no es correcta</p>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Fecha</label>
-                    <input type="date" class="form-control" formControlName="fecha">
+                    <input type="text" [placeholder]="fechaActual | date: 'dd/MM/y'" [value]="fechaActual | date: 'dd/MM/y'" class="form-control" formControlName="fecha">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Categoría</label>
                     <select class="form-select" formControlName="categoria">
-                        <option value="opcion">Selecciona una opción</option>
-                        <option value="general">General</option>
-                        <option value="salud">Salud y nutrición</option>
+                        <option hidden>Selecciona una opción</option>
+                        <option [value]="categoria" *ngFor="let categoria of categorias">{{categoria}}</option>
                     </select>
+                    <p class="error" *ngIf="checkError('categoria', 'required')">El campo es obligatorio</p>
                 </div>
-                <input type="submit" value="Enviar" class="btn btn-secondary" (click)="onClick()">
+                <input type="submit" [disabled]="!formulario.valid" value="Enviar" class="btn btn-secondary" (click)="onClick()">
             </form>
         </div>
     </div>
