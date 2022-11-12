@@ -15,7 +15,27 @@
     padding: 5px 0px;
 }
 
+.autor,
+.fecha {
+    font-size: 0.8em;
+}
+
+.autor {
+    font-weight: 500;
+}
+
 .autor img {
     border-radius: 50%;
     width: 30px;
+}
+
+.fecha {
+    text-align: right;
+    color: gray;
+}
+
+.card-text {
+    text-align: justify;
+    height: 100px;
+    overflow: hidden;
 }
