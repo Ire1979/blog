@@ -46,7 +46,7 @@ export class FormularioComponent implements OnInit {
     this.categorias = this.blogService.getCategories();
   }
 
-  onClick() {
+  onSubmit() {
     this.blogService.createPost(this.formulario.value);
     this.router.navigate(['/posts']);
   }
