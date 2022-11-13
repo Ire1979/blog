@@ -21,6 +21,22 @@ export class BlogService {
         categoria: 'General'
       },
       {
+        titulo: 'Llegada del cachorro a casa',
+        texto: '',
+        autor: 'Gotham',
+        imagen: 'https://img.freepik.com/fotos-premium/lindos-cachorros-boston-terrier-duermen-manta-punto-rosa-mascotas-maravillosas-emocion-tierna-perro-foto-alta-calidad_444187-858.jpg?w=2000',
+        fecha: new Date('2020-06-03'),
+        categoria: 'Cachorros'
+      },
+      {
+        titulo: 'Cuidados básicos del Boston',
+        texto: 'Son perros bastante limpios por lo que cepillarlos con una manopla una vez a la semana y un baño al mes, es suficiente. También es importante, limpiar periódicamente las orejas para prevenir otitis así como cortarle las uñas con regularidad. Hay que prestar especial atención a los ojos, por eso se recomienda limpiarlos para evitar infecciones.',
+        autor: 'Gotham',
+        imagen: 'https://estaticos.muyinteresante.es/media/cache/1000x_thumb/uploads/images/gallery/5b28cb645bafe81d1017c411/15-boston-terrier-perro-banandose-en-banera-rosa.jpg',
+        fecha: new Date('2020-05-10'),
+        categoria: 'Salud y Nutrición'
+      },
+      {
         titulo: 'Características físicas',
         texto: 'El Boston Terrier es un perro pequeño, fuerte y musculado de hocico achatado y cuadrado y con orejas erectas. Tiene los ojos grandes y redondos y de color oscuro. El pelo es corto y brillante de color negro o atrigado y blanco. El peso oscila entre los 6kg y los 11kg',
         autor: 'Gotham',
@@ -36,14 +52,7 @@ export class BlogService {
         fecha: new Date('2020-04-05'),
         categoria: 'General'
       },
-      {
-        titulo: 'Cuidados básicos del Boston',
-        texto: 'Son perros bastante limpios por lo que cepillarlos con una manopla una vez a la semana y un baño al mes, es suficiente. También es importante, limpiar periódicamente las orejas para prevenir otitis así como cortarle las uñas con regularidad. Hay que prestar especial atención a los ojos, por eso se recomienda limpiarlos para evitar infecciones.',
-        autor: 'Gotham',
-        imagen: 'https://estaticos.muyinteresante.es/media/cache/1000x_thumb/uploads/images/gallery/5b28cb645bafe81d1017c411/15-boston-terrier-perro-banandose-en-banera-rosa.jpg',
-        fecha: new Date('2020-05-10'),
-        categoria: 'Salud y Nutrición'
-      },
+
       {
         titulo: 'Principales problemas de salud',
         texto: 'Esta raza tiene tendencia a padecer enfermedades oculares como cataratas, luxaciones de rodilla y sordera, así como dificultad para respirar al ser perros branquicéfalos.',

@@ -1,7 +1,7 @@
 <div class="container">
-    <h1 class="my-5 text-center">Nuevo Post</h1>
+    <h1 class="my-5 text-left">Nuevo Post</h1>
     <div class="row">
-        <div class="col-6 offset-3">
+        <div class="col">
             <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
                 <div class="mb-3">
                     <label class="form-label">Título</label>
@@ -34,6 +34,9 @@
                 </div>
                 <input type="submit" [disabled]="!formulario.valid" value="Enviar" class="btn btn-secondary">
             </form>
+        </div>
+        <div class="col text-center">
+            <img src="https://i.pinimg.com/originals/08/74/9e/08749e203df1a1bcee35a9c821871c83.png" alt="foto boston" width="50%">
         </div>
     </div>
 </div>

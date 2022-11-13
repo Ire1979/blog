@@ -13,10 +13,11 @@ export class ListaPostsComponent implements OnInit {
   categorias: string[];
 
 
+
+
   constructor(private blogService: BlogService) {
     this.posts = [];
     this.categorias = [];
-
   }
 
   ngOnInit(): void {
@@ -32,6 +33,5 @@ export class ListaPostsComponent implements OnInit {
       this.posts = this.blogService.filterByCategory($event.target.value);
     }
   }
-
 
 }

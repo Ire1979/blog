@@ -1,14 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Abel:regular);
+
+* {
+    font-family: 'Abel', sans-serif;
+}
+
+header {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #40d0d0;
+}
+
+.navbar-brand span {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+nav.navbar {
+    padding: 0px;
+}
+
 nav.navbar ul li {
     background-color: lightgray;
     cursor: pointer;
     border-radius: 8px;
-    margin: 0px 10px;
+    margin: 6px 10px;
     padding: 0px 15px;
 }
 
 nav.navbar ul li:hover,
 nav.navbar ul li.active {
     background-color: gray;
+}
+
+nav.navbar ul li a {
+    color: #40d0d0;
 }
 
 nav.navbar ul li:hover a {
