@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Post } from '../interfaces/post.interface';
 
@@ -7,6 +8,7 @@ import { Post } from '../interfaces/post.interface';
 export class BlogService {
 
   arrPosts: Post[];
+
 
   constructor() {
     this.arrPosts = [
@@ -71,7 +73,14 @@ export class BlogService {
   }
 
   getAllPosts(): Post[] {
-    return this.arrPosts;
+    let postsLS = [];
+    if (localStorage.getItem('posts')) {
+      postsLS = JSON.parse(localStorage.getItem('posts')!);
+      return postsLS;
+    } else {
+      return this.arrPosts;
+    }
+
   }
 
   getCategories(): string[] {
@@ -85,6 +94,8 @@ export class BlogService {
 
   createPost(pPost: Post) {
     this.arrPosts.push(pPost);
+    const strPosts = JSON.stringify(this.arrPosts);
+    localStorage.setItem('posts', strPosts);
   }
 
 }

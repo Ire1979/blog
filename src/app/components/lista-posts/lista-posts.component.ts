@@ -22,6 +22,7 @@ export class ListaPostsComponent implements OnInit {
   ngOnInit(): void {
     this.posts = this.blogService.getAllPosts();
     this.categorias = this.blogService.getCategories();
+
   }
 
   selectCategory($event: any) {
