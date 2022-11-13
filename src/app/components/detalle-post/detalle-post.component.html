@@ -1,17 +1,24 @@
-<div class="row">
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card" *ngIf="detalle">
-            <div class="fotoCard" [ngStyle]="{backgroundImage: 'url('+detalle.imagen+')'}">
+<div class="container">
+    <div class="row justify-content-md-center mt-5">
+        <div class="col-8">
+            <div *ngIf="detalle">
                 <div class="categoria">{{detalle.categoria}}</div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">{{detalle.titulo}}</h5>
-                <div class="row">
+                <h5 class="title mt-2">{{detalle.titulo}}</h5>
+                <div class="row my-3">
                     <div class="col autor"><img src="https://avatars.githubusercontent.com/u/114173266?s=40&v=4" alt="autor"> {{detalle.autor}}</div>
                     <div class="col fecha">{{detalle.fecha | date: 'dd/MM/y'}}</div>
                 </div>
+                <div class="detFoto mb-5" [ngStyle]="{backgroundImage: 'url('+detalle.imagen+')'}"></div>
+
                 <p class="card-text mt-3">{{detalle.texto}}</p>
+
             </div>
         </div>
+        <div class="col-8 text-center my-5">
+            <button [routerLink]="['/posts']" class="btn-volver">Volver</button>
+        </div>
+
     </div>
+
+
 </div>

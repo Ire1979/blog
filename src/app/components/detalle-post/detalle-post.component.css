@@ -1,0 +1,52 @@
+.detFoto {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.categoria {
+    text-align: center;
+    text-transform: uppercase;
+    color: #63a9b4;
+    font-size: 1.1em;
+    ;
+}
+
+.title {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.autor,
+.fecha {
+    font-size: 0.9em;
+}
+
+.autor {
+    font-weight: 600;
+}
+
+.autor img {
+    border-radius: 50%;
+    width: 30px;
+}
+
+.fecha {
+    text-align: right;
+    color: gray;
+}
+
+.btn-volver {
+    border: 2px solid #63a9b4;
+    color: #63a9b4;
+    background-color: #fff;
+    padding: 5px 40px;
+    border-radius: 6px;
+}
+
+.btn-volver:hover {
+    color: #fff;
+    background-color: #63a9b4;
+
+}

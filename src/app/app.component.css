@@ -6,7 +6,8 @@
 
 header {
     background-color: #f1f1f1;
-    border-bottom: 1px solid #40d0d0;
+    border-bottom: 2px solid #5fb4c1;
+    ;
 }
 
 .navbar-brand span {
@@ -33,7 +34,7 @@ nav.navbar ul li.active {
 }
 
 nav.navbar ul li a {
-    color: #40d0d0;
+    color: #63a9b4;
 }
 
 nav.navbar ul li:hover a {

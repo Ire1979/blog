@@ -1,25 +1,27 @@
 h1 {
     font-size: 50px;
+    color: #5fb4c1;
 }
 
-.btn-group button {
+.selecCategoria button {
     border: none;
     border-radius: 0;
     padding: 0;
+    border-bottom: 2px solid #fff;
 }
 
-.btn-group button:hover {
+.selecCategoria button:hover {
     border: none;
     border-radius: 0;
     background: none;
-    color: #40d0d0;
-    border-bottom: 2px solid #40d0d0;
+    color: #63a9b4;
+    border-bottom: 2px solid #63a9b4;
 }
 
-.btn-group button.active {
+.selecCategoria button.active {
     background: none;
-    color: #d62e27;
-    border-bottom: 2px solid #40d0d0;
+    color: #63a9b4;
+    border-bottom: 2px solid #63a9b4;
 }
 
 .fotoCard {
@@ -71,6 +73,20 @@ h1 {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.btn-leer {
+    border: 2px solid #63a9b4;
+    color: #63a9b4;
+    background-color: #fff;
+    width: 50%;
+    border-radius: 6px;
+}
+
+.btn-leer:hover {
+    color: #fff;
+    background-color: #63a9b4;
+
 }

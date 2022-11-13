@@ -15,3 +15,22 @@ textarea.ng-invalid.ng-touched {
     font-style: italic;
     color: lightcoral;
 }
+
+.formFoto img {
+    filter: hue-rotate(184deg);
+}
+
+.btn-enviar {
+    border: 2px solid #63a9b4;
+    color: #63a9b4;
+    background-color: #fff;
+    padding: 5px 40px;
+    border-radius: 6px;
+    font-size: 1.1em;
+}
+
+.btn-enviar:hover {
+    color: #fff;
+    background-color: #63a9b4;
+
+}
