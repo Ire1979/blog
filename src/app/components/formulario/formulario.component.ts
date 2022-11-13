@@ -36,7 +36,6 @@ export class FormularioComponent implements OnInit {
     });
 
 
-
     this.categorias = [];
 
   }
@@ -47,6 +46,7 @@ export class FormularioComponent implements OnInit {
 
   onSubmit() {
     this.formulario.value.fecha = new Date();
+    this.formulario.value.id = this.blogService.arrPosts.length;
     this.blogService.createPost(this.formulario.value);
     this.router.navigate(['/posts']);
   }

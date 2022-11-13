@@ -18,6 +18,7 @@
                         <div class="col fecha">{{post.fecha | date: 'dd/MM/y'}}</div>
                     </div>
                     <p class="card-text mt-3">{{post.texto}}</p>
+                    <button [routerLink]="['/posts', post.id]">Leer más</button>
                 </div>
             </div>
         </div>

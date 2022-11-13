@@ -13,6 +13,7 @@ export class BlogService {
   constructor() {
     this.arrPosts = [
       {
+        id: 0,
         titulo: 'Origen del Boston Terrier',
         texto: 'El origen de la raza está en EE.UU. a finales del siglo XIX, cuando se cruzó el terrier inglés, una raza que ya no existe, con bulldogs ingleses. Más tarde también se unieron los bulldogs franceses a la línea genealógica del boston terrier. Debe su nombre a la ciudad de Boston, donde se exibió por primera vez esta raza. Estos perros llegaron a Europa en 1927 y aunque ha adquirido popularidad en los últimos años, no es una raza muy frecuente de ver.',
         autor: 'Gotham',
@@ -21,6 +22,7 @@ export class BlogService {
         categoria: 'General'
       },
       {
+        id: 1,
         titulo: 'Llegada del cachorro a casa',
         texto: '',
         autor: 'Gotham',
@@ -29,6 +31,7 @@ export class BlogService {
         categoria: 'Cachorros'
       },
       {
+        id: 2,
         titulo: 'Cuidados básicos del Boston',
         texto: 'Son perros bastante limpios por lo que cepillarlos con una manopla una vez a la semana y un baño al mes, es suficiente. También es importante, limpiar periódicamente las orejas para prevenir otitis así como cortarle las uñas con regularidad. Hay que prestar especial atención a los ojos, por eso se recomienda limpiarlos para evitar infecciones.',
         autor: 'Gotham',
@@ -37,6 +40,7 @@ export class BlogService {
         categoria: 'Salud y Nutrición'
       },
       {
+        id: 3,
         titulo: 'Características físicas',
         texto: 'El Boston Terrier es un perro pequeño, fuerte y musculado de hocico achatado y cuadrado y con orejas erectas. Tiene los ojos grandes y redondos y de color oscuro. El pelo es corto y brillante de color negro o atrigado y blanco. El peso oscila entre los 6kg y los 11kg',
         autor: 'Gotham',
@@ -45,6 +49,7 @@ export class BlogService {
         categoria: 'General'
       },
       {
+        id: 4,
         titulo: 'Personalidad del Boston Terrier',
         texto: 'Es un perro extremadamente inteligente, juguetón, sociable y cariñoso aunque también puede llegar a ser muy testarudo. Es fácil de adiestrar ya que le gusta aprender y sólo ladra cuando es necesario.',
         autor: 'Gotham',
@@ -54,6 +59,7 @@ export class BlogService {
       },
 
       {
+        id: 5,
         titulo: 'Principales problemas de salud',
         texto: 'Esta raza tiene tendencia a padecer enfermedades oculares como cataratas, luxaciones de rodilla y sordera, así como dificultad para respirar al ser perros branquicéfalos.',
         autor: 'Gotham',
@@ -62,6 +68,7 @@ export class BlogService {
         categoria: 'Salud y Nutrición'
       },
       {
+        id: 6,
         titulo: 'Actividad física',
         texto: 'No son perros que deban quemar una gran cantidad de energía. Necesitarán salir unas tres veces al día para estirar las patas, explorar y relacionarse. Los paseos de unos veinte minutos más algunas excursiones ocasionales suelen ser suficientes para mantenerlos estimulados y felices. ',
         autor: 'Gotham',
@@ -70,6 +77,7 @@ export class BlogService {
         categoria: 'Salud y Nutrición'
       },
       {
+        id: 7,
         titulo: 'Alimentación',
         texto: 'Los boston tienden al sobrepeso, por eso necesitan una alimentación equilibrada, rica en proteinas que fortalezca su musculatura y un porcentaje controlado de carbohidratos así como evitar los cereales para no contribuir a ese sobrepeso.',
         autor: 'Gotham',
@@ -105,6 +113,11 @@ export class BlogService {
     this.arrPosts.push(pPost);
     const strPosts = JSON.stringify(this.arrPosts);
     localStorage.setItem('posts', strPosts);
+    console.log(pPost)
+  }
+
+  getById(pId: number): Post | undefined {
+    return this.arrPosts.find(post => post.id === pId);
   }
 
 }
