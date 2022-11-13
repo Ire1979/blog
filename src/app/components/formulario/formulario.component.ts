@@ -11,7 +11,7 @@ import { BlogService } from 'src/app/services/blog.service';
 export class FormularioComponent implements OnInit {
 
   formulario: FormGroup;
-  fechaActual: Date;
+
   categorias: string[];
 
 
@@ -28,15 +28,14 @@ export class FormularioComponent implements OnInit {
       ]),
       imagen: new FormControl('', [
         Validators.required,
-        Validators.pattern(/\b(https?:\/\/.*?\.[a-z]{2,4}\/[^\s]*\b)/)
+        Validators.pattern(/(https:\/\/)([^\s(["<,>/]*)(\/)[^\s[",><]*(.png|.jpg)(\?[^\s[",><]*)?/)
       ]),
-      fecha: new FormControl(),
       categoria: new FormControl('', [
         Validators.required
       ])
     });
 
-    this.fechaActual = new Date();
+
 
     this.categorias = [];
 
@@ -47,6 +46,7 @@ export class FormularioComponent implements OnInit {
   }
 
   onSubmit() {
+    this.formulario.value.fecha = new Date();
     this.blogService.createPost(this.formulario.value);
     this.router.navigate(['/posts']);
   }

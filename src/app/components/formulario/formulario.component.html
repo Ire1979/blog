@@ -22,11 +22,7 @@
                     <label class="form-label">Imagen</label>
                     <input type="text" class="form-control" placeholder="Introduce una URL" formControlName="imagen">
                     <p class="error" *ngIf="checkError('imagen', 'required')">El campo es obligatorio</p>
-                    <p class="error" *ngIf="checkError('imagen', 'pattern')">La URL introducida no es correcta</p>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Fecha</label>
-                    <input type="text" [placeholder]="fechaActual | date: 'dd/MM/y'" [value]="fechaActual | date: 'dd/MM/y'" class="form-control" formControlName="fecha">
+                    <p class="error" *ngIf="checkError('imagen', 'pattern')">La URL introducida no es correcta (.jpg o .png)</p>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Categoría</label>
