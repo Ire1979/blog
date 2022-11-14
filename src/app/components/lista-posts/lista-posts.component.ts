@@ -11,7 +11,7 @@ export class ListaPostsComponent implements OnInit {
 
   posts: Post[];
   categorias: string[];
-  active: boolean;
+
 
 
 
@@ -19,7 +19,7 @@ export class ListaPostsComponent implements OnInit {
   constructor(private blogService: BlogService) {
     this.posts = [];
     this.categorias = [];
-    this.active = false;
+
   }
 
   ngOnInit(): void {
@@ -29,7 +29,6 @@ export class ListaPostsComponent implements OnInit {
   }
 
   selectCategory($event: any) {
-    this.active = !this.active;
     if ($event.target.value === 'todos') {
       this.posts = this.blogService.getAllPosts();
     } else {

@@ -1,8 +1,8 @@
 <div class="container">
     <h1 class="my-5 text-center">No soy francés, soy de Boston!</h1>
     <div class="btn-group mb-3 selecCategoria">
-        <button (click)="selectCategory($event)" value="todos" type="button" class="cat btn btn-outline-secondary m-2" [ngClass]="{'': !active,'active': active}">Todos</button>
-        <button (click)="selectCategory($event)" [value]="categoria" type="button" class="cat btn btn-outline-secondary m-2" [ngClass]="{'': !active,'active': active}" *ngFor="let categoria of categorias">{{categoria}}</button>
+        <button (click)="selectCategory($event)" value="todos" type="button" class="cat btn btn-outline-secondary m-2">Todos</button>
+        <button (click)="selectCategory($event)" [value]="categoria" type="button" class="cat btn btn-outline-secondary m-2" *ngFor="let categoria of categorias">{{categoria}}</button>
     </div>
     <div class="row">
 

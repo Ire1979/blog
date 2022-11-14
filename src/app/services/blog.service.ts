@@ -114,13 +114,6 @@ export class BlogService {
   }
 
   filterByCategory(pCategory: string): Post[] {
-
-    /* let postsLS = [];
-    if (localStorage.getItem('posts')) {
-      return postsLS.filter(post => post.categoria === pCategory);      
-    } else {
-      return this.arrPosts.filter(post => post.categoria === pCategory);
-    } */
     return this.arrPosts.filter(post => post.categoria === pCategory);
 
 
